@@ -583,10 +583,10 @@ PACKAGE_URL=''
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+alsa_LIBS
+alsa_CFLAGS
 gmodule_LIBS
 gmodule_CFLAGS
-gtkmm_LIBS
-gtkmm_CFLAGS
 gtk_LIBS
 gtk_CFLAGS
 PKG_CONFIG_LIBDIR
@@ -680,10 +680,10 @@ PKG_CONFIG_PATH
 PKG_CONFIG_LIBDIR
 gtk_CFLAGS
 gtk_LIBS
-gtkmm_CFLAGS
-gtkmm_LIBS
 gmodule_CFLAGS
-gmodule_LIBS'
+gmodule_LIBS
+alsa_CFLAGS
+alsa_LIBS'
 
 
 # Initialize some variables set by options.
@@ -1310,13 +1310,12 @@ Some influential environment variables:
               path overriding pkg-config's built-in search path
   gtk_CFLAGS  C compiler flags for gtk, overriding pkg-config
   gtk_LIBS    linker flags for gtk, overriding pkg-config
-  gtkmm_CFLAGS
-              C compiler flags for gtkmm, overriding pkg-config
-  gtkmm_LIBS  linker flags for gtkmm, overriding pkg-config
   gmodule_CFLAGS
               C compiler flags for gmodule, overriding pkg-config
   gmodule_LIBS
               linker flags for gmodule, overriding pkg-config
+  alsa_CFLAGS C compiler flags for alsa, overriding pkg-config
+  alsa_LIBS   linker flags for alsa, overriding pkg-config
 
 Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
@@ -2833,97 +2832,6 @@ $as_echo "yes" >&6; }
 fi
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtkmm" >&5
-$as_echo_n "checking for gtkmm... " >&6; }
-
-if test -n "$gtkmm_CFLAGS"; then
-    pkg_cv_gtkmm_CFLAGS="$gtkmm_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtkmm-3.0 >= 3.8.0\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "gtkmm-3.0 >= 3.8.0") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_gtkmm_CFLAGS=`$PKG_CONFIG --cflags "gtkmm-3.0 >= 3.8.0" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-if test -n "$gtkmm_LIBS"; then
-    pkg_cv_gtkmm_LIBS="$gtkmm_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gtkmm-3.0 >= 3.8.0\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "gtkmm-3.0 >= 3.8.0") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_gtkmm_LIBS=`$PKG_CONFIG --libs "gtkmm-3.0 >= 3.8.0" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-
-
-
-if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-
-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
-        _pkg_short_errors_supported=yes
-else
-        _pkg_short_errors_supported=no
-fi
-        if test $_pkg_short_errors_supported = yes; then
-	        gtkmm_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gtkmm-3.0 >= 3.8.0" 2>&1`
-        else
-	        gtkmm_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gtkmm-3.0 >= 3.8.0" 2>&1`
-        fi
-	# Put the nasty error message in config.log where it belongs
-	echo "$gtkmm_PKG_ERRORS" >&5
-
-	as_fn_error $? "Package requirements (gtkmm-3.0 >= 3.8.0) were not met:
-
-$gtkmm_PKG_ERRORS
-
-Consider adjusting the PKG_CONFIG_PATH environment variable if you
-installed software in a non-standard prefix.
-
-Alternatively, you may set the environment variables gtkmm_CFLAGS
-and gtkmm_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details." "$LINENO" 5
-elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
-is in your PATH or set the PKG_CONFIG environment variable to the full
-path to pkg-config.
-
-Alternatively, you may set the environment variables gtkmm_CFLAGS
-and gtkmm_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details.
-
-To get pkg-config, see <http://pkg-config.freedesktop.org/>.
-See \`config.log' for more details" "$LINENO" 5; }
-else
-	gtkmm_CFLAGS=$pkg_cv_gtkmm_CFLAGS
-	gtkmm_LIBS=$pkg_cv_gtkmm_LIBS
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-$as_echo "yes" >&6; }
-
-fi
-
-pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gmodule" >&5
 $as_echo_n "checking for gmodule... " >&6; }
 
@@ -3009,6 +2917,97 @@ See \`config.log' for more details" "$LINENO" 5; }
 else
 	gmodule_CFLAGS=$pkg_cv_gmodule_CFLAGS
 	gmodule_LIBS=$pkg_cv_gmodule_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+
+fi
+
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for alsa" >&5
+$as_echo_n "checking for alsa... " >&6; }
+
+if test -n "$alsa_CFLAGS"; then
+    pkg_cv_alsa_CFLAGS="$alsa_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"alsa > 1.1\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "alsa > 1.1") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_alsa_CFLAGS=`$PKG_CONFIG --cflags "alsa > 1.1" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$alsa_LIBS"; then
+    pkg_cv_alsa_LIBS="$alsa_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"alsa > 1.1\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "alsa > 1.1") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_alsa_LIBS=`$PKG_CONFIG --libs "alsa > 1.1" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        alsa_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "alsa > 1.1" 2>&1`
+        else
+	        alsa_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "alsa > 1.1" 2>&1`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$alsa_PKG_ERRORS" >&5
+
+	as_fn_error $? "Package requirements (alsa > 1.1) were not met:
+
+$alsa_PKG_ERRORS
+
+Consider adjusting the PKG_CONFIG_PATH environment variable if you
+installed software in a non-standard prefix.
+
+Alternatively, you may set the environment variables alsa_CFLAGS
+and alsa_LIBS to avoid the need to call pkg-config.
+See the pkg-config man page for more details." "$LINENO" 5
+elif test $pkg_failed = untried; then
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
+is in your PATH or set the PKG_CONFIG environment variable to the full
+path to pkg-config.
+
+Alternatively, you may set the environment variables alsa_CFLAGS
+and alsa_LIBS to avoid the need to call pkg-config.
+See the pkg-config man page for more details.
+
+To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+See \`config.log' for more details" "$LINENO" 5; }
+else
+	alsa_CFLAGS=$pkg_cv_alsa_CFLAGS
+	alsa_LIBS=$pkg_cv_alsa_LIBS
         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
 

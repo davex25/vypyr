@@ -3,5 +3,5 @@
 aclocal
 autoconf
 automake
-./configure
+./configure && cd src && ./setup.py install --user
 

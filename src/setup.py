@@ -10,7 +10,7 @@ setup(name="vypyr",
         license="MIT",
         packages=['vypyr'],
         install_requires=[
-            'mido'
+            'mido', 'rtmidi'
             ],
         zip_safe=False)
 

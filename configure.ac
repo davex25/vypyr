@@ -6,6 +6,7 @@ AM_PATH_PYTHON([2.7])
 
 PKG_CHECK_MODULES(gtk, [gtk+-3.0])
 PKG_CHECK_MODULES(gmodule, [gmodule-export-2.0])
+PKG_CHECK_MODULES([alsa], [alsa > 1.1])
 
 AC_CONFIG_FILES([Makefile src/Makefile src/vypyr/Makefile])
 
