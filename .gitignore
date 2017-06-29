@@ -91,3 +91,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+Makefile
+Makefile.in
+aclocal.m4
+config.status
+*.*~
